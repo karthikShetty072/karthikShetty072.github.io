@@ -1,0 +1,41 @@
+body
+{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-size: cover;
+
+
+}
+
+p{
+    font-size:20px;
+}
+
+th{
+    
+    background:"";
+    border-radius:20px;
+    font-size:50px;
+    font-style:bold;
+ 
+}
+
+table:hover {
+    border-radius:20px;    
+}
+
+td{
+    align:center;
+    padding:50px;
+
+}
+a{
+    border-radius:10%;
+    background:white;
+
+}

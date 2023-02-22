@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>merging pages</title>
+    <script src="//code.jquery.com/jquery-1.10.2.is"></script>
+    <script type="text/html" src="test2.htm"></script>
+</head>
+
+<body>
+    <div class="divID">
+        this is from test2 page
+    </div>
+    <div class="secondid">
+
+
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".secondid").load("test1.htm");
+
+
+        });
+    </script>
+</body>
+
+
+</html>

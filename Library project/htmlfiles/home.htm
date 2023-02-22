@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script>
+        function includeHTML() {
+
+            var z, i, elmnt, file, xhttp; /*loop through a collection of all HTML elements:*/
+
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i]; /*search for elements with a certain atrribute:*/
+
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) { /*make an HTTP request using the attribute value as the file name:*/
+
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body background="../images/background.jpg " width="100% ">
+
+    <!div w3-include-html="slidertest.htm">
+    </div>
+    <div w3-include-html="header.htm"></div>
+
+
+    <script>
+        includeHTML();
+    </script>
+    <p style="font-size:3vw" align="center " style="font-size:30px "><b><u><mark1>Welcome To Government First Grade College Koppa -577126  <br> Library page </b></u>
+    </p>
+    </mark1>
+    <img position="absolute" src="../images/homepageimage.jpg " height="200 " width="300 ">
+
+
+
+    <p style="font-size:2vw" position="absolute" align="bottem " style="font-size:20px " style="color:white "><b><mark>
+    The Library of the Governemnt First Grade College, Koppa was established since its inception.  The Library aims to develop a comprehensive collection of documents that is useful for the faculty 
+    students and research scholars in their education and research activities the library has a collection of 7000 books that include the publication Archives ti the present future users and periodicals 
+    which include journals magazines.  Library has also fully automated with easy libo-E library management software package with all the modules for use in the library.  Computers are installed in the 
+    library mainly to access the OPAC of the library include the internet facility.<br><br></b></p>
+    </mark>
+    <a href='https://www.horando.de/en/'>visitors</a>
+    <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=71d1884fb43caf67149621aa850cfea7f9b7f62f'></script>
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/766258/t/10"></script>
+
+    <script>
+        includeHTML();
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
