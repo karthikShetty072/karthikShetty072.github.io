@@ -23,6 +23,9 @@ body {
   
     
       }
+a{
+    color:#ccc;
+}
   .mp{
     font-size: 4vw;
     display: inline-block;
