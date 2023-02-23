@@ -7,6 +7,8 @@ body {
     background-size: 100%;
     background-color: rgba(0, 0, 0, 0.697);
     color: #fff;
+    cursor: url("../images/link.cur"),  default;
+    scroll-behavior: smooth;
     
 }
   head{
@@ -20,7 +22,7 @@ body {
     padding: 10px;
     border-radius:5px;
     position: sticky;
-    position: relative;
+   
     display:block;
   top: 0;
   z-index: 1;
