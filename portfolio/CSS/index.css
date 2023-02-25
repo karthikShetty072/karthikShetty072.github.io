@@ -7,31 +7,40 @@ body {
     background-size: 100%;
     background-color: rgba(0, 0, 0, 0.697);
     color: #fff;
-    cursor: url("../images/pointer-_1_.cur"),  default;
-    scroll-behavior: smooth;
     
-}
+    scroll-behavior: smooth;
+    cursor:url('../images/pointer-_1_.cur'),default;
+
+    
+    
+  }
+  .my-element {
+    
+  }
+  
   head{
     line-height:0.2;
+  }
+  a{
+    color:#ccc;
+    
   }
   
   header {
     background-image: linear-gradient(#cc2b5e , #753a88);
     background-attachment: fixed;
     color: #fff;
-    padding: 10px;
     border-radius:5px;
     position: sticky;
-   
-    display:block;
+    display: block;
+  
+    
+    
   top: 0;
   z-index: 1;
   
     
       }
-a{
-    color:#ccc;
-}
   .mp{
     font-size: 4vw;
     display: inline-block;
@@ -44,10 +53,18 @@ a{
     
     text-align: center;
     display: inline-block;
-    margin-left: 18%;
+    margin-left: 20vw;
     font-size:4vw;
     position: relative;
-    padding :10px;
+    
+    transition:0.3s;
+    
+  
+  }
+  .nm:hover{
+    scale: 1.2;
+    transition: 0.3s;
+    
   }
   #name{
     font-family:'Audiowide', sans-serif;
@@ -60,9 +77,15 @@ a{
     right:50px;
     display:inline-block;
     border-radius: 10%;
+    clip-path: circle();
+    transition: 0.5s;
 
     
     
+  }
+  .pic:hover{
+    background-color: #555;
+    transform:scale(1.2)
   }
   .cnt{
     height: 5vw;
@@ -73,12 +96,14 @@ a{
     height:5vw;
     width:7vw;
   }
+
+
   nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: right;
-     
+    
     
   }
   
@@ -86,6 +111,17 @@ a{
   nav li {
     display: inline-block;
     margin-right: 20px;
+    border-radius: 5px;
+    
+
+  }
+  
+nav li  :hover {
+    background-image:linear-gradient(90deg, rgba(55,53,94,1) 0%, rgba(119,9,121,1) 51%, rgba(29,173,202,1) 100%);
+    
+    
+    
+
   }
   
   nav li:last-child {
@@ -128,5 +164,58 @@ a{
   .project p {
     margin-bottom: 10px;
   }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+  
+  .gallery-item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    position: relative;
+  }
+  
+  .gallery-item img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .gallery-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition: opacity 0.2s ease;
+  }
+  
+  .gallery-caption p {
+    margin: 0;
+  }
+  
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+  }
+  
+  #pro1{
+    background-image: linear-gradient(90deg, rgba(55,53,94,1) 0%, rgba(119,9,121,1) 51%, rgba(29,173,202,1) 100%);
+    color:#fff;
+    font-size: 2.5vw;
+  }
+  #pro1:hover{
+    scale:1.1;
+    transition: 0.5s;
+  }
+
+
+
+
+
   
   
