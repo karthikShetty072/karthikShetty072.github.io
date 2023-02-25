@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
   <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="shortcut icon" href="../images/icon.png">
+    
   </head>
   <body>
     <header>
@@ -45,37 +46,84 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScrpit</li>
-            <li>Python beginner level</li>
+            <li>Python biginner level</li>
             <li>PHP beginner level</li>
             <li>C</li>
             <li>AWS certified</li>
-            <li>DATABASE SQL</li>
-          <li>Android development</li>
 
         </ul>
         </section>
         <section id="skills">
             <h2>SKILLS</h2>
             <ul>
-                <a href="https://drive.google.com/file/d/1U91ZVHLSCQ_EjES4xQffH0UWb4Gfuds5/view?usp=sharing"><li>HMTL certified from Solo Learn</li></a>
                 <a href="https://www.credly.com/badges/8ad9af97-3069-4472-b6d8-9d7b0e7183ae/public_url"><li>AWS Certification</li></a>
                 <a href="https://www.hackerrank.com/certificates/iframe/b11803f6f8da"><li>Hacker Rank python (basics) compeletion</li></a>
                 <a href="https://www.hackerrank.com/certificates/6421cf6c2c50"><li>Hacker Rank problem solving (basics) </li></a>
+                <a href="https://www.credly.com/badges/8ad9af97-3069-4472-b6d8-9d7b0e7183ae/public_url"><li>AWS Certification</li></a>
             </ul>
         </section>
+        
+          
+           
+        </section>
 
-      </section>
+        <img class="myImages" id="myImg" src="../images/Sololearn HTML.png" alt="Sololearn HTML" width="300" height="200">
+<img class="myImages" id="myImg" src="../images/problem_solving_basic certificate_page-0001.jpg" alt="HackerRank Problem solving (basics)"
+width="300" height="200">
+<img class="myImages" id="myImg" src="../images/python_basic certificate_page-0001.jpg" alt="HackerRank python(basics)" width="300" height="200">
+<img class="myImages" id="myImg" src="../images/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge.jpg" alt="HackerRank python(basics)" width="300" height="200">
+<div id="myModal" class="modal">
+    
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+    
+<script>
+  // create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+var img = images[i];
+// and attach our click listener for this image.
+img.onclick = function(evt) {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+modal.style.display = "none";
+}
+</script>
+
+
       <section id="projects">
         <h2>My Projects</h2>
         <div class="project">
           <h3>Project 1</h3>
           <p>This is my own website where i upload the photos of the nature i shoot.</p>
-          <a href="https://naturesworld.000webhostapp.com/" target="_blank">View Project</a>
+          <form>
+            <a href="https://naturesworld.000webhostapp.com/" target="_blank"> <input id="pro1"type="Button" name="View" value="View"> </a>
+          </form>
+          
         </div>
         <div class="project">
           <h3>Project 2</h3>
           <p>This was an earlier project when i first started learning the WEB development , this is an college library web page.</p>
-          <a href="https://karthikshetty072.github.io/Library%20project/htmlfiles/home.htm" target="_blank">View Project</a>
+          <form>
+          <a href="https://karthikshetty072.github.io/Library%20project/htmlfiles/home.htm" target="_blank"><input id="pro1" type="Button" name="view" value="View"></a>
+        </form>
         </div>
       </section>
       <section id="contact">
@@ -88,9 +136,11 @@
       </section>
     </main>
     <footer>
-      <!-- Badge Code - Do Not Change The Code -->
-<a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="1882b990b233fa0b354e80cd1e15adc9|5|external|1|#1a282d|#f5f5f5|small|s-hit">Hit Counter</a><script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
+      <a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="1882b990b233fa0b354e80cd1e15adc9|5|external|1|#1a282d|#f5f5f5|small|s-hit">Hit Counter</a><script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
 <!-- Badge Code End Here -->
+    
+
+      
       <p>&copy; 2023 My Portfolio. All rights reserved.</p>
     </footer>
   </body>
